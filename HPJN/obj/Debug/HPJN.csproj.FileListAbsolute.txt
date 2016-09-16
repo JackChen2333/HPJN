@@ -1,0 +1,13 @@
+C:\MY\GitWorkshop\HPJN\HPJN\bin\Debug\HPJN.exe.config
+C:\MY\GitWorkshop\HPJN\HPJN\bin\Debug\HPJN.exe
+C:\MY\GitWorkshop\HPJN\HPJN\bin\Debug\HPJN.pdb
+C:\MY\GitWorkshop\HPJN\HPJN\obj\Debug\HPJN.csprojResolveAssemblyReference.cache
+C:\MY\GitWorkshop\HPJN\HPJN\obj\Debug\HPJN.Form1.resources
+C:\MY\GitWorkshop\HPJN\HPJN\obj\Debug\HPJN.Properties.Resources.resources
+C:\MY\GitWorkshop\HPJN\HPJN\obj\Debug\HPJN.csproj.GenerateResource.Cache
+C:\MY\GitWorkshop\HPJN\HPJN\obj\Debug\HPJN.exe
+C:\MY\GitWorkshop\HPJN\HPJN\obj\Debug\HPJN.pdb
+C:\MY\GitWorkshop\HPJN\HPJN\bin\Debug\HPJN.exe.manifest
+C:\MY\GitWorkshop\HPJN\HPJN\bin\Debug\HPJN.application
+C:\MY\GitWorkshop\HPJN\HPJN\obj\Debug\HPJN.exe.manifest
+C:\MY\GitWorkshop\HPJN\HPJN\obj\Debug\HPJN.application
