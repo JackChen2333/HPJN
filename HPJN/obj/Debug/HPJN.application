@@ -3,18 +3,15 @@
   <assemblyIdentity name="HPJN.application" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <description asmv2:publisher="Microsoft" asmv2:product="HPJN" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
-  <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
-  </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="HPJN.exe.manifest" size="3435">
+    <dependentAssembly dependencyType="install" codebase="HPJN.exe.manifest" size="3974">
       <assemblyIdentity name="HPJN.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ww5Wi4WaHl+F3ZMdYkjRDfi6cdqUzqLv8wIgX0oRVeI=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>5L1uOP1wc8IvqzLK1U+r5n1wipc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

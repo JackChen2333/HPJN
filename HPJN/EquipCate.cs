@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-//using System.Threading.Tasks;
 
 namespace HPJN
 {
-    class WifeDrop
+    class EquipCate
     {
-        public string Num { get; set; }
+        public int Type{ get; set; }
         public string Name { get; set; }
-        public string DropMap { get; set; }
     }
 }

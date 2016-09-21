@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 
 namespace HPJN
 {
@@ -20,9 +20,24 @@ namespace HPJN
             return wifeRepo.GetAllType();
         }
 
+        public List<EquipCate> GetEquipAllType()
+        {
+            return wifeRepo.GetEquipAllType();
+        }
+
         public List<WifeInfo> GetInfoByType(int i)
         {
             return wifeRepo.GetInfoByType(i);
+        }
+
+        public List<WifeInfoUp> GetUpInfoByType(int i)
+        {
+            return wifeRepo.GetUpInfoByType(i);
+        }
+
+        public List<EquipInfo> GetEquipInfoByType(int i)
+        {
+            return wifeRepo.GetEquipInfoByType(i);
         }
 
         public List<WifeDrop> GetDropByType(int i)
@@ -38,6 +53,11 @@ namespace HPJN
         public List<ShipBuildingTime> GetBuildingTime()
         {
             return wifeRepo.GetBuildingTime();
+        }
+
+        public List<ShipBuildingFormula> GetBuildingFormula()
+        {
+            return wifeRepo.GetBuildingFormula();
         }
 
         public List<Expedition> GetExpe()

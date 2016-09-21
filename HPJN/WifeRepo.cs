@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 
 namespace HPJN
 {
@@ -20,8 +20,13 @@ namespace HPJN
                 {
                     Notice notice = new Notice();
                     notice.Notice1 = (string)dr["Notice1"];
-                    notice.Notice2 = (string)dr["Notice2"];
-                    notice.Notice3 = (string)dr["Notice3"];
+                    notice.Notice2 = (string)dr["Notice4"];
+                    notice.Notice3 = (string)dr["Notice5"];
+                    notice.Notice4 = (string)dr["Notice6"];
+                    notice.Notice5 = (string)dr["Notice7"];
+                    notice.Notice6 = (string)dr["Notice8"];
+                    notice.Notice7 = (string)dr["Notice9"];
+                    notice.Notice8 = (string)dr["Notice10"];
                     list.Add(notice);
                 }
             }
@@ -54,12 +59,35 @@ namespace HPJN
             return list;
         }
 
+        public List<EquipCate> GetEquipAllType()
+        {
+            List<EquipCate> list = new List<EquipCate>();
+            try
+            {
+                string sql = "select * from EquipCate";
+                DataTable dt = DataAccess.GetDataTable(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    EquipCate ec = new EquipCate();
+                    ec.Type = (int)dr["Type"];
+                    ec.Name = (string)dr["Name"];
+                    list.Add(ec);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return list;
+        }
+
         public List<WifeInfo> GetInfoByType(int type)
         {
             List<WifeInfo> list = new List<WifeInfo>();
             try
             {
                 string sql = "";
+
                 if (type == 8)
                 {
                     sql = "select * from INFO";
@@ -74,20 +102,118 @@ namespace HPJN
                 {
                     WifeInfo wife = new WifeInfo();
 
-                    wife.Num=(string)dr["Num"];
-                    wife.Name=(string)dr["Name"];
-                    wife.Star=(int)dr["Star"];
-                    wife.Shield=(int)dr["Shield"];
-                    wife.Hp=(int)dr["Hp"];
-                    wife.Fire=(int)dr["Fire"];
-                    wife.Armor=(int)dr["Armor"];
-                    wife.Resist=(int)dr["Resist"];
+                    wife.Num = (string)dr["Num"];
+                    wife.Name = (string)dr["Name"];
+                    wife.Star = (int)dr["Star"];
+                    wife.Shield = (int)dr["Shield"];
+                    wife.Hp = (int)dr["Hp"];
+                    wife.Fire = (int)dr["Fire"];
+                    wife.Armor = (int)dr["Armor"];
+                    wife.Resist = (int)dr["Resist"];
                     wife.Investigate = (int)dr["Investigate"];
                     wife.Maneuver = (int)dr["Maneuver"];
-                    wife.Equip = (int)dr["Equip"];
+                    wife.Skill1 = (string)dr["Skill1"];
+                    wife.Skill2 = (string)dr["Skill2"];
                     wife.Oil = (int)dr["ConOil"];
                     wife.Ammo = (int)dr["ConAmmo"];
+                    wife.Equip = (int)dr["Equip"];
                     wife.Country = (string)dr["Country"];
+                    wife.TotalAtt = (int)dr["TotalAtt"];
+                    wife.EquipName1 = (string)dr["EquipName1"];
+                    wife.EquipName2 = (string)dr["EquipName2"];
+                    wife.EquipName3 = (string)dr["EquipName3"];
+                    wife.EquipName4 = (string)dr["EquipName4"];
+
+                    list.Add(wife);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return list;
+        }
+
+        public List<WifeInfoUp> GetUpInfoByType(int type)
+        {
+            List<WifeInfoUp> list = new List<WifeInfoUp>();
+            try
+            {
+                string sql = "";
+
+                if (type == 8)
+                {
+                    sql = "select * from INFOLEVELUP";
+                }
+                else
+                {
+                    sql = "select * from INFOLEVELUP where Type=" +
+                        type.ToString();
+                }
+                DataTable dt = DataAccess.GetDataTable(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    WifeInfoUp wife = new WifeInfoUp();
+
+                    wife.Num = (string)dr["Num"];
+                    wife.Name = (string)dr["Name"];
+                    wife.Star = (int)dr["Star"];
+                    wife.Shield = (int)dr["Shield"];
+                    wife.Hp = (int)dr["Hp"];
+                    wife.Fire = (int)dr["Fire"];
+                    wife.Armor = (int)dr["Armor"];
+                    wife.Resist = (int)dr["Resist"];
+                    wife.Investigate = (int)dr["Investigate"];
+                    wife.Maneuver = (int)dr["Maneuver"];
+                    wife.Skill1 = (string)dr["Skill1"];
+                    wife.Skill2 = (string)dr["Skill2"];
+                    wife.Oil = (int)dr["ConOil"];
+                    wife.Ammo = (int)dr["ConAmmo"];
+                    wife.Equip = (int)dr["Equip"];
+                    wife.Country = (string)dr["Country"];
+                    wife.TotalAtt = (int)dr["TotalAtt"];
+                    wife.EquipName1 = (string)dr["EquipName1"];
+                    wife.EquipName2 = (string)dr["EquipName2"];
+                    wife.EquipName3 = (string)dr["EquipName3"];
+                    wife.EquipName4 = (string)dr["EquipName4"];
+
+                    list.Add(wife);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return list;
+        }
+
+        public List<EquipInfo> GetEquipInfoByType(int type)
+        {
+            List<EquipInfo> list = new List<EquipInfo>();
+            try
+            {
+                string sql = "";
+
+                if (type == 8)
+                {
+                    sql = "select * from EquipInfo";
+                }
+                else
+                {
+                    sql = "select * from EquipInfo where Type=" +
+                        type.ToString();
+                }
+                DataTable dt = DataAccess.GetDataTable(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    EquipInfo wife = new EquipInfo();
+                    wife.TypeName = (string)dr["TypeName"];
+                    wife.Name = (string)dr["Name"];
+                    wife.Fire = (string)dr["Fire"];
+                    wife.FireUp = (string)dr["FireUp"];
+                    wife.Source = (string)dr["Source"];
+                    wife.Formula = (string)dr["Formula"];
+
                     list.Add(wife);
                 }
             }
@@ -173,6 +299,28 @@ namespace HPJN
                     sbt.Star=(string)dr["Star"];
                     list.Add(sbt);
 
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return list;
+        }
+
+        public List<ShipBuildingFormula> GetBuildingFormula()
+        {
+            List<ShipBuildingFormula> list = new List<ShipBuildingFormula>();
+            try
+            {
+                string sql = "select * from Build";
+                DataTable dt = DataAccess.GetDataTable(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    ShipBuildingFormula sbf = new ShipBuildingFormula();
+                    sbf.Formula = (string)dr["Consume"];
+                    sbf.Wife=(string)dr["Type"];
+                    list.Add(sbf);
                 }
             }
             catch (Exception)

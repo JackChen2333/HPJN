@@ -4,15 +4,15 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 
 namespace HPJN
 {
     class DataAccess
     {
         //public static String connstr = "Server=tcp:b768j0aoo4.database.windows.net,1433;Initial Catalog=T1_PA_Leaderboard_DB;Persist Security Info=False;User ID=t1user01;Password=T1password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-        public static String connstr = "server=T1XPS8700X02\\SQLEXPRESS;integrated security=true;database=HPJNDB;connection Timeout=30";
-        //public static String connstr = "server=173.3.111.80,1433;integrated security=false;database=HPJNDB;uid=sa;pwd=lokfay;connection Timeout=30";
+        //public static String connstr = "server=T1XPS8700X02\\SQLEXPRESS;integrated security=true;database=HPJNDB;connection Timeout=30";
+        public static String connstr = "server=173.3.111.80,1433;integrated security=false;database=HPJNDB;uid=sa;pwd=lokfay;connection Timeout=30";
         public static object GetSingleAnswer(string sql)
         {
             object obj = null;
