@@ -15,6 +15,7 @@ namespace HPJN
         public Form1()
         {
             InitializeComponent();
+            //CreateDesktopShortCut();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -295,7 +296,6 @@ namespace HPJN
                     c.SortMode = DataGridViewColumnSortMode.NotSortable;
                 }
                 
-
                 dg1.Refresh();
             }
 
@@ -311,5 +311,31 @@ namespace HPJN
             dg1.Refresh();
         }
 
+
+        private static void CreateDesktopShortCut()
+        {
+            string path = System.Environment.GetFolderPath(Environment.SpecialFolder.StartMenu);
+            if (!path.EndsWith("\\"))
+            {
+                path += "\\";
+            }
+            path += @"Programs\皇牌机娘数据查询\JackChen";
+            if (System.IO.Directory.Exists(path))
+            {
+                string desktop = System.Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                if (!desktop.EndsWith("\\"))
+                {
+                    desktop += "\\";
+                }
+                foreach (String file in System.IO.Directory.GetFiles(path))
+                {
+                    System.IO.FileInfo fi = new System.IO.FileInfo(file);
+                    if (!System.IO.File.Exists(desktop + fi.Name))
+                    {
+                        fi.CopyTo(desktop + fi.Name);
+                    }
+                }
+            }
+        }
     }
 }
