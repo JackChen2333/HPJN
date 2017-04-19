@@ -1,5 +1,7 @@
 # HPJN data query winfrom
 
-******   a game data query winform ******
+******  A game data query winform 
 
-******   Already close because of game   ******
+******  Already close because of game  
+
+******  Share source codes if somebody need, using C# and sqlserver
